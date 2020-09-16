@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -66,7 +67,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "front-end-exercise:build"
+            "browserTarget": "front-end-exercise:build",
+            "proxyConfig": "src/proxy.conf.json"
           },
           "configurations": {
             "production": {
@@ -123,6 +125,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "front-end-exercise"
+    }
+  },
+  "defaultProject": "front-end-exercise",
+  "cli": {
+    "analytics": false
+  }
 }
